@@ -1,0 +1,39 @@
+{
+    "name": "vhnh/geocode",
+    "license": "MIT",
+    "description": "Add geocoding to your Laravel application",
+    "homepage": "http://github.com/vhnh/geocode",
+    "authors": [
+        {
+            "name": "Tobias Thaden",
+            "email": "hello@tobiasthaden.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/vhnh/geocode/issues",
+        "source": "https://github.com/vhnh/geocode"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Vhnh\\Geocode\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vhnh\\Geocode\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^7.2.5",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.3"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    }
+}
