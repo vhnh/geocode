@@ -36,4 +36,14 @@ class GoogleProviderTest extends TestCase
         $this->assertEquals(53.5976795, $response->latitude());
         $this->assertEquals(9.9162463, $response->longitude());
     }
+
+    /** @test */
+    public function it_throws_an_exception_on_a_failed_request()
+    {
+        $this->expectException(\Illuminate\Http\Client\RequestException::class);
+            
+        Http::fake(['*' => Http::response(['error' => 'Something went wrong'], 400)]);
+    
+        (new Request(new Address))->handle();
+    }
 }

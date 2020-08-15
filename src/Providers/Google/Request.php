@@ -15,6 +15,8 @@ class Request extends GeocodeRequest implements GeocodeRequestContract
             'key' => config('geocode.google.key'),
         ]);
 
+        $response->throw();
+
         return new Response($response->json());
     }
 
