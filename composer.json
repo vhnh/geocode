@@ -27,7 +27,7 @@
     },
     "require": {
         "php": "^7.2.5",
-        "guzzlehttp/guzzle": "^7.0"
+        "guzzlehttp/guzzle": "^8.3"
     },
     "require-dev": {
         "orchestra/testbench": "^5.3"
